@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			a:hover{
+				color: darkorchid;
+				
+			}
+		</style>
+		<script>
+function Addap() {
+	x = document.getElementById("p1");
+	x.innerHTML = x.innerHTML + " 四月天 ";
+}
+
+function Adda() {
+	var x = document.getElementById("div1");
+	var y = document.createElement("a");
+	y.href = '#';
+	y.innerText = "四月天";
+	x.appendChild(y);
+	y.style.color = "yellow";
+	y.style.backgroundColor = "red";
+	y.style.textDecoration = "none";
+}
+
+function removeAllp() {
+	var x = document.getElementById("div1");
+	var y = x.childNodes;
+	for(i = y.length - 1; i >= 0; i--) {
+		if(y[i].tagName == "P")
+			x.removeChild(y[i]);
+	}
+}
+
+function changeBgColor() {
+	var x = document.getElementById("div1");
+	x.style.backgroundColor = "red";
+}
+
+function removeAlla() {
+	var x = document.getElementById("div1");
+	var y = x.childNodes;
+
+	for(i = y.length - 1; i >= 0; i--) {
+		if(y[i].tagName == 'A')
+			x.removeChild(y[i]);
+	}
+
+}
+
+function changeOne() {
+	x = document.getElementById("div1");
+	y = document.getElementsByTagName("p");
+
+	if(x.hasChildNodes()) {
+		x.removeChild(x.lastChild);
+	}
+
+	y.innerText = "你是人间的四月天";
+
+}
+
+function addOne() {
+	x = document.getElementById("div1");
+	y = document.createElement("p");
+	x.appendChild(y);
+	y.innerText = "你是人间的四月天";
+}
+
+function refresh() {
+
+	window.location.reload()
+
+}</script>
+	</head>
+	<body style="align-content: center;">
+		<div id="div1">
+		<p id="p1" class="Aclass">你是人间的四月天</p>
+		<p id="p2" class="Aclass">你是人间的四月天</p>
+		<p id="p3" class="Aclass">你是人间的四月天</p>
+		<p id="p4" class="Aclass">你是人间的四月天</p>
+		<p id="p5" class="Aclass">你是人间的四月天</p>
+		<a href="#"  style="text-decoration: none;">你是人间的八月天</a>
+		<a href="#"  style="text-decoration: none;">你是人间的八月天</a>
+		<a href="#"  style="text-decoration: none;">你是人间的八月天</a>
+		</div>
+		<button onclick="removeAlla()">一键删除所有a元素</button>
+		<button onclick="removeAllp()">一键删除所有p元素</button>
+		<button onclick="changeBgColor()">改变背景颜色</button>
+		<button onclick="Adda()">添加一个a元素</button>
+		<button onclick="changeOne()">删除元素（包括空格）</button>
+		<button onclick="addOne()">添加一个p</button>
+		<button onclick="refresh()">刷新页面</button>
+		
+	</body>
+</html>
