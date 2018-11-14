@@ -35,9 +35,12 @@ function removeAllp() {
 	}
 }
 
-function changeBgColor() {
-	var x = document.getElementById("div1");
-	x.style.backgroundColor = "red";
+function changeColor() {
+	var x = document.getElementsByTagName("P");
+	for(i=0;i<x.length;i++)
+	{
+	    x[i].style.color = "chartreuse";
+	}
 }
 
 function removeAlla() {
@@ -89,7 +92,7 @@ function refresh() {
 		</div>
 		<button onclick="removeAlla()">一键删除所有a元素</button>
 		<button onclick="removeAllp()">一键删除所有p元素</button>
-		<button onclick="changeBgColor()">改变背景颜色</button>
+		<button onclick="changeColor()">改变P元素颜色</button>
 		<button onclick="Adda()">添加一个a元素</button>
 		<button onclick="changeOne()">删除元素（包括空格）</button>
 		<button onclick="addOne()">添加一个p</button>
