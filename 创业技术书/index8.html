@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1"><!--告诉ie使用新的渲染方式，防止低版本的ie不能使用css3-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,700" rel="stylesheet" type="text/css"/>
+    <link href="css/css.css" rel="stylesheet"/>
+    <style>
+    	*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Georia,serif;
+    background:#ddd;
+    font-weight:bold;
+    font-size:15px;
+    color:#333;
+    overflow: hidden;
+    -webkit-font-smoothing:antialiased;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.clr{
+    width:0;
+    height:0;
+    overflow: hidden;
+    clear:both;
+    padding:0;
+    margin:0;
+}
+.nav{
+    width:100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-family:"Josefin Slab","Myriad pro" ,serif;
+}
+.nav input,.nav a{
+    width:20%;
+    height:34px;
+    line-height:34px;
+    position:fixed;
+    bottom:0;
+    cursor:pointer;
+}
+.nav input{
+    opacity:0;
+    z-index:1000;
+}
+.nav a{
+    z-index:10;
+    font-weight:700;
+    font-size:16px;
+    background:black; /*导航栏颜色*/
+    color:#fff;
+    text-align:center;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+#nav1,#nav1 + a{
+    left:0%;
+}
+#nav2,#nav2 + a{
+    left:20%;
+}
+#nav3,#nav3 + a{
+    left:40%;
+}
+#nav4,#nav4 + a{
+    left:60%;
+}
+#nav5,#nav5 + a{
+    left:80%;
+}
+.nav input:checked + a,
+.nav input:checked:hover +a{
+    background:#821134;
+}
+.nav input:checked + a:after{
+    content:"";
+    width:0;
+    height:0;
+    overflow:hidden;
+    border:20px solid transparent;
+    border-bottom-color:#821134;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-20px;
+}
+.nav input:hover + a{
+    background:#AD244f;
+}
+.scroll,.panel{
+    width:100%;
+    height:100%;
+    position:relative;
+    text-align:center;
+    padding-top:250px;
+}
+.scroll{
+    left:0;
+    top:0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    color:black;
+    font-weight:bold;
+}
+.panel{
+    background:#fff;
+    overflow: hidden;
+}
+/*动画*/
+#nav1:checked ~ .scroll #panel1 h1{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+#nav2:checked ~ .scroll #panel2 h1{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+#nav3:checked ~ .scroll #panel3 h1{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+#nav4:checked ~ .scroll #panel4 h1{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+#nav5:checked ~ .scroll #panel5 h1{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes moveDown {
+    0%{
+        -webkit-transform: translateY(-40px);
+        -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        -o-transform: translateY(-40px);
+        transform: translateY(-40px);
+        opacity:0;
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+.panel p{
+    color:#000;
+    margin-top:20px;
+}
+#nav1:checked ~ .scroll{
+     -webkit-transform: translateY(0%);
+     -moz-transform: translateY(0%);
+     -ms-transform: translateY(0%);
+     -o-transform: translateY(0%);
+     transform: translateY(0%);
+ }
+#nav2:checked ~ .scroll{
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+#nav3:checked ~ .scroll{
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+#nav4:checked ~ .scroll{
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+#nav5:checked ~ .scroll{
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    -ms-transform: translateY(-400%);
+    -o-transform: translateY(-400%);
+    transform: translateY(-400%);
+}
+.icon{
+    width:200px;
+    height:200px;
+    background:dodgerblue;
+    -webkit-transform:translateY(-50%) rotate(45deg);
+    -moz-transform:translateY(-50%) rotate(45deg);
+    -ms-transform:translateY(-50%) rotate(45deg);
+    -o-transform:translateY(-50%) rotate(45deg);
+    transform:translateY(-50%) rotate(45deg);
+    position:absolute;
+    left:50%;
+    top:0;
+    margin-left:-100px;
+}
+[data-icon]:after{
+    content:attr(data-icon);
+    width:200px;
+    height:200px;
+    color:#fff;
+    font-size:90px;
+    text-align:center;
+    line-height:200px;
+    position:absolute;
+    left:18%;
+    top:18%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.panelColor{
+    background:white;
+    color:#fff;
+    overflow: hidden;
+    
+}
+.panelColor .icon{
+    background:dodgerblue;
+    color:#fa96b5;
+}
+.panelColor .icon:after{
+    color:white;
+}
+.scroll .panel h1{
+    font-size:60px;
+}
+@media screen and (max-device-width: 520px){
+
+}
+#liucheng{
+	background-image: url(img/QQ图片20181127085533.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 500px;
+	height: 300px;
+	margin-left: 20px;
+	margin-top: -60px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <input type="radio" name="radio-set" checked id="nav1">
+        <a href="#panel1">项目概况</a>
+        <input type="radio" name="radio-set" id="nav2">
+        <a href="#panel2">市场背景</a>
+        <input type="radio" name="radio-set" id="nav3">
+        <a href="#panel3">运营计划</a>
+        <input type="radio" name="radio-set" id="nav4">
+        <a href="#panel4">核心竞争力</a>
+        <input type="radio" name="radio-set" id="nav5">
+        <a href="#panel5">营销收入</a>
+    <div class="scroll">
+        <div class="panel" id="panel1">
+            <div class="icon" data-icon="a"></div>
+            <div style="float: left;margin-top: -200px;">
+            <span style="margin-left: 20px;font-size: 30px;">多维社区（Community MD）<br></span>
+            <span style="margin-left: 200px;">超级强大的轻社交，资源分享社区</span>
+            </div>
+             
+            <div style="float: right;margin-top: -200px;">
+            <span style="margin-right: 200px;font-size: 30px;">项目发起人：LT</span>
+            
+            <p style="margin-right:20px;margin-top: 100px;"><span>项目介绍：</span>APP旨在打造一个年轻人最大中文社区。这里不仅结合了资源分享，<br><br>技术教程分享，更提供了社交以及问答平台，此外还有实时热点版块以供<br><br>大家阅读。
+            APP涵盖社交，娱乐，学习等多个方面，是一个多元化平台，<br><br>为人们提供一个表达和交流思想的自由网络空间，让那些对同一个话题感<br><br>兴趣的人们聚集在一起，展开交流和互相帮助，并汇集志同道合的网友。</p>
+            
+            <h4><br />(APP内容如左图所示)</h4>
+            </div>
+            
+            <div id="liucheng"></div>
+        </div>
+        <div class="panel panelColor" id="panel2">
+            <div class="icon" data-icon="b"></div>
+             <div style="float: left;margin-top: -200px;">
+            <span style="margin-left: 20px;font-size: 40px;color: black;">Market Background<br></span>
+           
+            </div>
+            
+            <p style="margin-top: -70px;"> 目前，行内影响力大的网络问答社区有知乎，百度知道等APP，知乎是网络问答社区，连接各行各业的用户。</p>
+            <p>它的用户围绕着某一感兴趣的话题进行相关的讨论，同时可以关注兴趣一致的人。这是知乎的一大特色。而百</p>
+            <p>度知道是一个基于搜索的互动式知识问答分享平台，他能结合搜索引擎用户自己有针对性地提出问题，通过积</p>
+            <p>分奖励机制发动其他用户，来解决该问题。 同时，这些问题的答案又会进一步作为搜索结果，提供给其他有类</p>
+            <p>似疑问的用户，达到分享知识的效果。这是他们最大的特色。但都有点单一，趣味性不足。同时，技术类平台</p>
+            <p>著名的有CSDN，博客园，它们是中国的IT社区和服务平台，他们都是不错的学习技术的平台，但都知道CSDN</p>
+            <p>上的许多资源，成果并不是免费的，所以还存在许多局限。在资源分享一块，MIUI官方论坛，葫芦侠3楼等都有</p>
+            <p>许多人分享一些知名度不高但功能非常强大的软件，甚至有大神修改过的破解版本或是自己做的APP，但让人担</p>
+            <p>忧的一点就是安全问题，担心软件是否锁机，捆版垃圾软件，夹杂一些少儿不宜广告等一系列问题。这些软件在</p>
+            <p style="margin-left: -90px;">各自领域都是行内的龙头，但也因如此，我们经常用使用要下载好几个软件，这是非常不方便的。</p>
+            
+        </div>
+        <section class="panel" id="panel3">
+            <div class="icon" data-icon="c"></div>
+                <div style="float: left;margin-top: -200px;">
+            <span style="margin-left: 20px;font-size: 30px;">产品定位<br></span>
+            <p style="margin-left: 20px;">涵知识分享，学习，社交与一体的综合化平台，用户即可围绕着某一感兴趣的话题</p>
+            <p style="margin-left: 20px;">分享彼此的知识、经验和见解。也可进行互动问答，知识技能学习，旨在打造一个</p>
+             <p style="float: left;margin-left: 20px;">让用户感到便捷，舒适的多元化社区。</p>
+            </div>
+            <div style="float: left;">
+            	<span style="margin-left: 20px;font-size: 20px;">目标群体:</span><span> 以年轻人为主的各大群体.</span>
+            </div>
+             <div style="float: right;margin-top: -200px;overflow: hidden;">
+            <p style="margin-right: 200px;font-size: 30px;">运营策略</p>
+      
+            </div>
+            <div style="margin-left:100px;margin-top:-70px ;">前期线下：</div>
+            <div style="margin-left: 468px;margin-top: 10px;">1.校园推广（找相关的学校进行推广，考虑受众与产品的关联性）</div>
+            <div  style="margin-left: 475px;margin-top: 10px;">2.吸引厂家加盟(针对厂家加盟的卖点，然后进行会员广告的销售）</div>
+            <div  style="margin-left: 650px;margin-top: 10px;">3.与厂家合作（如发印有二维码的餐巾纸，省人工成本，也能省去商家购买费用，双利模式）</div>
+            <div style="margin-left: 100px;margin-top: 10px;">前期线上：</div>
+            <div  style="margin-left: 275px;margin-top: 10px;">1.微博推广（结合热评，进行宣传）</div>
+            <div  style="margin-left: 475px;margin-top: 10px;">2.新媒体推广（在曝光率足够高的平台，如腾讯视频今日头条等）</div>
+            <div  style="margin-left: 320px;margin-top: 10px;">3.通过应用市场渠道运营和免费渠道去拉新</div>
+            <div  style="margin-left: 375px;margin-top: 10px;">4.部分付费＋免费渠道（保证APP有一定新增量级）</div>
+            <div  style="margin-left: 440px;margin-top: 10px;">5.建立公司线上自媒体，通过优质内容输出，吸引用户兴趣。</div>
+           
+        </section>
+        <section class="panel panelColor" id="panel4">
+            <div class="icon" data-icon="d"></div>
+            
+            <p style="float: left;margin-top: -200px;font-size: 30px;">产品文化：<br></p>
+            <p style="float:left;margin-left: 100px;margin-top: -130px">自由  有趣  正能量   自主</p>
+            <p style="float: left;margin-top: -70px;font-size: 30px;">产品优势：<br></p>
+            <p style="float:left;margin-left: 100px;margin-top: -20px">这个APP涵盖的功能综合了几大主流APP，取长补短，并发展自己的特色。让用户</p>
+            <p style="float:left;margin-left: 80px;margin-top:5px ">更方便，更喜欢；平台多元一体化；就是本产品的核心竞争优势.</p>
+            <p style="float:right;font-size: 30px;;margin-top: -100px;margin-right: 450px">项目介绍：</p>
+            <p style="float:right;margin-right: 40px;margin-top: -40px;color: black;">用户可自由分享资源以供其他人免费下载，也可以让其他人使用平台货币进行<br><br>购买，
+                                           最后通过平台换取利润。完全由个人意愿，一方面可以提高自己的影响<br><br>力，亦或者是
+                                           获得报酬。同时也会有悬赏板块，提问者可以决定赏金发布问题<br><br>进行悬赏。同时对
+                                           无偿提供学习，影音资源的用户，平台会适当发放补助。一<br><br>方面可以留住用户，另外一方面
+                                           也可以扩大资源覆盖面，吸引更多人。影音版<br><br>块方面，对于用户分享的视频及音乐，平
+                                           台内置相关播发器，可以在线预览，<br><br>这样免除了用户下载的麻烦，使用户更加方便。同时
+                                           在社区论坛方面，里面按<br><br>城市进行分类，使得同城的人距离更加亲近，了解身边的有趣的
+                                           人和事，当然<br><br>也可以跳出城市板块，在全国板块中进行讨论。使地域化更加明显，聊天更加<br><br>有趣,交流方式更加自由。建立一个全国人都适用并且喜欢用的论坛社区板块。</p>
+            <!--<div style="float: right;margin-top: 250px;margin-right: -385px;color: black;"> 有趣。打造一个全国人都适用并且爱用的论坛社区板块。</div>-->
+            <!--<p style="margin-top: -70px;">you are my sunshine</p>
+            <p>1.流量变现</p>
+            <p>2.提供增值服务</p>
+            <p>3.打造交易市场在虚拟货币转换及购买中盈利（平台佣金）</p>
+            <p>4.广告植入</p>
+            <p>5.交易用户，采取互推，提高用户利用率</p>
+            <p>……</p>-->
+        </section>
+        <section class="panel" id="panel5">
+            <div class="icon" data-icon="e"></div>
+            <p style="margin-top: -70px;">you are my sunshine</p>
+            <p>1.流量变现</p>
+            <p>2.提供增值服务</p>
+            <p>3.打造交易市场在虚拟货币转换及购买中盈利（平台佣金）</p>
+            <p>4.广告植入</p>
+            <p>5.交易用户，采取互推，提高用户利用率</p>
+            <p>……</p>
+        </section>
+
+    </div>
+    </div>
+</div>
+<script>
+    window.onload= function () {
+        var scroll=document.getElementsByClassName("scroll")[0];//ie不兼容，换成id会成功
+        var panel=document.getElementsByClassName("panel");//ie不兼容，换成id会成功
+
+        var clientH=window.innerHeight;
+        scroll.style.height=clientH+"px";
+        for(var i=0;i<panel.length;i++){
+            panel[i].style.height=clientH+"px";
+        }
+        /*下面是关于鼠标滚动*/
+        var inputC=document.getElementsByTagName("input");
+        var wheel= function (event) {
+            var delta=0;
+            if(!event)//for ie
+                event=window.event;
+            if(event.wheelDelta){//ie,opera
+                delta=event.wheelDelta/120;
+            }else if(event.detail){
+                delta=-event.detail/3;
+            }
+            if(delta){
+                handle(delta,inputC);
+            }
+            if(event.preventDefault)
+                event.preventDefault();
+            event.returnValue=false;
+        };
+        if(window.addEventListener){
+            window.addEventListener('DOMMouseScroll',wheel,false);
+        }
+        window.onmousewheel=wheel;
+    };
+    function handle(delta,arr) {
+        var num;
+        for(var i=0;i<arr.length;i++){//得到当前checked元素的下标
+            if(arr[i].checked){
+                num=i;
+            }
+        }
+        if(delta>0 && num>0){//向上滚动
+            num--;
+            arr[num].checked=true;
+        }else if(delta<0 && num<4){//向下滚动
+            num++;
+            arr[num].checked=true;
+        }
+    }
+</script>
+</body>
+</html>
