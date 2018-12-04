@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>多维社区移动端</title>
+		<!-- meta使用viewport以确保页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- 引入 jQuery Mobile 样式 -->
+		<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+		<!-- 引入 jQuery 库 -->
+		<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- 引入 jQuery Mobile 库 -->
+
+		<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				background: #16A085;
+				font-family: 'Questrial', sans-serif;
+				font-size: 12pt;
+				color: rgba(0, 0, 0, .6);
+			}
+			
+			li {
+				display: inline;
+			}
+			
+			li a span:hover {
+				color: red!important;
+			}
+		</style>
+	</head>
+
+	<body style="width: 100%;">
+
+		<div data-role="page" id="pageone" data-theme="a">
+
+			<div data-role="panel" id="myPanel" data-position-fixed="true">
+				<div data-role="main" class="ui-content">
+
+					<ul data-role="listview" data-inset="true">
+						<li data-role="divider">合作伙伴</li>
+						<li>
+							<a href="#">
+								<img src="img/chrome.png">
+								<h2>Google Chrome</h2>
+								<p>Google Chrome 是免费的开源 web 浏览器。发布于 2008 年。</p>
+							</a>
+							<a href="#download" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/firefox.png">
+								<h2>Mozilla Firefox</h2>
+								<p>Firefox 是来自 Mozilla 的 web 浏览器。发布于 2004 年。</p>
+							</a>
+							<a href="#download" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/u=2543485600,456412738&fm=179&app=42&f=PNG.jpg.png">
+								<h2>QQ</h2>
+								<p>每一天,乐在沟通</p>
+							</a>
+							<a href="" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="panel" id="myPanel2" data-position-fixed="true" data-position="right">
+				<div data-role="collapsibleset" data-iconpos="right" data-collapsed-icon="comment">
+					<div data-role="collapsible">
+						<h3>爸爸</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>妈妈</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>姐姐</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>爷爷</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>奶奶</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>哥哥</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>妹妹</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h3>马云</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="header" style="overflow: hidden;" data-position="fixed" data-fullscreen="true">
+				<button style="color: #1ABC9C;"><a href="#myPanel" class=" ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color:#333333;float: right;">菜单</font></button>
+				<h1 style="text-align: center;">
+					<font style="font-family: '微软雅黑';font-size: 20px;color:#333333;"><span class="icon icon-unlock"></span>多维社区</font>
+				</h1>
+				<button style="color: #1ABC9C;"><a href="#myPanel2" class=" ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color: #333333;float: right;">好友</font></button>
+
+			</div>
+			<div data-role="main" class="ui-content" style="height:600px;">
+				<div class="box" id="box1">
+					<p style="font-size: 30px;text-align: center;">告别新手期，入住即享分成</p>
+					<p style="font-size: 15px;text-align: center;color: #666666;">多种收益并行，让创作更有价值，同步内容推送给数千万用户</p>
+					<img src="img/02.png" width="100%" />
+				</div>
+				<div class="box" id="box2">
+					<p style="font-size: 30px;text-align: center;">发现新资源，让社区更有趣</p>
+					<p style="font-size: 15px;text-align: center;color: #666666;">多种版块并行，让用户能免费享受多种资源，同步内容推送给数千万用户</p>
+					<img src="img/05.jpg" width="100%" />
+				</div>
+				<div class="box" id="box3">
+					<p style="font-size: 30px;text-align: center;">原创保护，让原创成为一种习惯</p>
+					<img src="img/03.png" width="100%" />
+				</div>
+				<div class="box" id="box4">
+					<p style="font-size: 30px;text-align: center;">个性化推荐&nbsp;&nbsp;&nbsp;&nbsp;私人定制</p>
+					<p style="font-size: 15px;text-align: center;">整个团队强强联手，以大数据为支撑，为您推荐专属阅读内容</p>
+					<img src="img/04.png" width="100%" />
+				</div>
+
+			</div>
+			<div data-role="footer" style="background-color: #D6D4D6;" data-position="fixed" data-fullscreen="true">
+
+				<h1>
+		    	<ul class="contact" >
+					<li><a href="#pagetwo"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">首页介绍</span></a></li>
+					<li><a href="#pagethree"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">注册</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">关于我们</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">联系我们</span></a></li>
+				</ul>
+				<div><h4 style="color: #333333;">Copyright © 1998-2018 LT. 版权所有</h4></div>
+		    </h1>
+			</div>
+		</div>
+		<div data-role="page" data-dialog="true" id="pagetwo">
+
+			<div data-role="panel" id="myPanel" data-swipe-close="false">
+				<h2>空荡荡</h2>
+
+			</div>
+
+			<div data-role="header" style="overflow: hidden;">
+				<button style="color: #1ABC9C;"><a href="#myPanel" class=" ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color:#333333;float: right;">菜单</font></button>
+				<h1 style="text-align: center;">
+					<font style="font-family: '微软雅黑';font-size: 20px;color:#333333;"><span class="icon icon-unlock"></span>多维社区</font>
+				</h1>
+				<button style="color: #1ABC9C;"><a  class=" ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color: #333333;float: right;">个人</font></button>
+
+			</div>
+			<div data-role="main" class="ui-content" style="background-image: url(img/src6.png);height:600px;">
+				<div class="box" id="box1">
+					<p style="font-size: 30px;text-align: center;">告别新手期，入住即享分成</p>
+					<p style="font-size: 20px;text-align: center;">多种收益并行，让创作更有价值，同步内容推送给数千万用户</p>
+					<img src="img/02.png" width="100%" />
+				</div>
+				<div class="box" id="box2">
+					<p style="font-size: 30px;text-align: center;">告别新手期，入住即享分成</p>
+					<p style="font-size: 20px;text-align: center;">多种收益并行，让创作更有价值，同步内容推送给数千万用户</p>
+					<img src="img/05.jpg" width="100%" />
+				</div>
+				<div class="box" id="box3">
+					<p style="font-size: 30px;text-align: center;">原创保护，让原创成为一种习惯</p>
+					<img src="img/03.png" width="100%" />
+				</div>
+				<div class="box" id="box4">
+					<p style="font-size: 30px;text-align: center;">个性化推荐&nbsp;&nbsp;&nbsp;&nbsp;私人定制</p>
+					<p style="font-size: 20px;text-align: center;">整个团队强强联手，以大数据为支撑，为您推荐专属阅读内容</p>
+					<img src="img/04.png" width="100%" />
+				</div>
+
+			</div>
+			<div data-role="footer" style="background-color:#D6D4D6;">
+
+				<h1>
+		    	<ul class="contact">
+					<li><a href="#pagetwo"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;")>首页介绍</span></a></li>
+					<li><a href="#pagethree"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">注册</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">关于我们</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">联系我们</span></a></li>
+					
+				</ul>
+				<div><h4 style="color: #333333;">Copyright © 1998-2018 LT. 版权所有</h4></div>
+		    </h1>
+			</div>
+		</div>
+		<div data-role="page" id="pagethree" data-theme="a" data-position="fixed" data-dialog="true">
+
+			<div data-role="panel" id="myPanel" data-position-fixed="true">
+				<div data-role="main" class="ui-content">
+
+					<ul data-role="listview" data-inset="true">
+						<li data-role="divider">合作伙伴</li>
+						<li>
+							<a href="#">
+								<img src="img/chrome.png">
+								<h2>Google Chrome</h2>
+								<p>Google Chrome 是免费的开源 web 浏览器。发布于 2008 年。</p>
+							</a>
+							<a href="#download" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/firefox.png">
+								<h2>Mozilla Firefox</h2>
+								<p>Firefox 是来自 Mozilla 的 web 浏览器。发布于 2004 年。</p>
+							</a>
+							<a href="#download" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/u=2543485600,456412738&fm=179&app=42&f=PNG.jpg.png">
+								<h2>QQ</h2>
+								<p>每一天,乐在沟通</p>
+							</a>
+							<a href="" data-transition="pop" data-icon="tag">下载浏览器</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="panel" id="myPanel2" data-position-fixed="true" data-position="right">
+				<div data-role="collapsibleset" data-iconpos="right" data-collapsed-icon="comment">
+					<div data-role="collapsible">
+						<h3>爸爸</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>妈妈</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>姐姐</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>爷爷</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>奶奶</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>哥哥</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>妹妹</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h3>马云</h3>
+						<p>我是可折叠的内容。</p>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="header" style="overflow: hidden;">
+				<button style="color: #1ABC9C;"><a href="#myPanel" class=" ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color:#333333;float: right;">菜单</font></button>
+				<h1 style="text-align: center;">
+					<font style="font-family: '微软雅黑';font-size: 20px;color:#333333;"><span class="icon icon-unlock"></span>多维社区</font>
+				</h1>
+				<button style="color: #1ABC9C;"><a href="#myPanel2" class=" ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left " style="float: left;"></a><font style="font-size: small; color: #333333;float: right;">好友</font></button>
+
+			</div>
+			<div data-role="main" class="ui-content" style="height:600px;">
+				<form method="post" action="demoform.asp">
+					<div class="ui-field-contain">
+						<label for="fname">姓名:</label>
+						<input type="text" name="fname" id="fname" data-clear-btn="true">
+						<label for="bday">生日：</label>
+						<input type="date" name="bday" id="bday">
+						<label for="lname">手机号码：</label>
+						<input type="text" name="lname" id="lname" data-clear-btn="true">
+						<label for="lname">账户名称：</label>
+						<input type="text" name="lname" id="lname" data-clear-btn="true" placeholder="填写你的昵称">
+						<label for="lname">密码：</label>
+						<input type="password" placeholder="请输入密码" data-clear-btn="true">
+						<label for="lname">重复密码：</label>
+						<input type="password" name="lname" id="lname" data-clear-btn="true" placeholder="请重复你的密码">
+						<label for="email">E-mail:</label>
+						<input type="email" name="email" id="email" placeholder="你的电子邮箱..">
+						<form method="post" action="demoform.php">
+					</div>
+					<font style="font-size: smaller;"><button class="button button" onclick="alert('注册成功!')">立即注册</button></font>
+					</form>
+			</div>
+			<div data-role="footer" style="background-color:#D6D4D6;">
+
+				<h1>
+		    	<ul class="contact">
+					<li><a href="#pagetwo"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">首页介绍</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;"onclick="alert('注册成功!')">注册</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">关于我们</span></a></li>
+					<li><a href="#"  title="点击分享" style="color: #333333;text-decoration: none;"><span style="color: #333333;text-decoration: none;">联系我们</span></a></li>
+					
+				</ul>
+				<div><h4 style="color: #333333;">Copyright © 1998-2018 LT. 版权所有</h4></div>
+		    </h1>
+			</div>
+		</div>
+
+	</body>
+
+</html>

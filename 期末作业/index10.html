@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta charset="utf-8" />
+		<title>多维社区——最大的互联网交流平台</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<linkrel="Bookmark" href="favicon.ico">
+		<link rel="stylesheet" href="css/YlSidler.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.Yl.Slide.min.js"></script>
+		<script>
+			$(function() {
+				$('.Yl-container').YlSlide({
+					wrapper: '.Yl-wrapper',
+					slideClass: '.Yl-slide',
+					stylePrefix: '.Yl-',
+					slideLength: 3,
+					pages: true,
+					pagination: '.Yl-pagination',
+					pagingSelect: '.Yl-pagination-bullet-active',
+					autoplay: 25000,
+					imgTemplate: {
+						0: ['<div class="Yl-img0"></div>'],
+						1: ['<div class="Yl-img1"></div>'],
+						2: ['<div class="Yl-img2"></div>']
+					},
+					fontTemplate: {
+						0: ['<div class="Yl-font0">多维社区</div>', '<div class="Yl-font1">超级强大的社交系统</div>', '<div class="Yl-font2">中文社区</div>'],
+						1: ['<div class="Yl-font0">产品文化</div>', '<div class="Yl-font1">自由  有趣  正能量   自主</div>', '<div class="Yl-font2">多元化平台</div>'],
+						2: ['<div class="Yl-font0">年轻人的中文社区</div>', '<div class="Yl-font1">一个表达和交流思想的自由网络空间</div>', '<div class="Yl-font2">多元化社区</div>']
+					},
+					fontAnimationMode: {
+						0: ['fadeInUp', 'fadeInUp', 'slideInLeft'],
+						1: ['fadeInUp', 'fadeInUp', 'slideInLeft'],
+						2: ['fadeInUp', 'fadeInUp', 'slideInLeft']
+					},
+					customTemplate: {
+						0: ['<div class="Yl-Button"><a href="introduce.html" target="_blank">查看详情</a></div>'],
+						1: ['<div class="Yl-Button"><a href="introduce.html" target="_blank">查看详情</a></div>'],
+						2: ['<div class="Yl-Button"><a href="introduce.html" target="_blank">查看详情</a></div>']
+					},
+					callback: function(e) {
+						//整个dom加载完成后的回调函数、切换动画前的回调						
+					},
+					before: function(e) {
+						//页面切换前的回调函数
+					},
+					after: function(e) {
+						//页面切换完成后的回调函数
+
+					}
+				});
+			});
+			
+			function myFunction(){
+			alert("网站处于建设初期，相关功能正在完善中,已为您刷新此页面");
+		}
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*body{
+				
+			}*/
+			
+			.headmenu {
+				width: 100%;
+				height: 50px;
+				position: fixed;
+				z-index: 999;
+				background-color: #202223;
+				margin: auto;
+				min-width: 1100px;
+			}
+			
+			.content1 {
+				width: 1200px;
+				margin: auto;
+			}
+			
+			h1.icon a {
+				position: relative;
+				float: left;
+				width: 220px;
+				height: 50px;
+				background: url(img/logo.png);
+				background-size: 180px 45px;
+				background-repeat: no-repeat !important;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.list {
+				list-style: none;
+				display: inline-block;
+				font-size: 14px;
+				margin-block-start: 1px;
+				margin-block-end: 1px;
+				margin-top: 14px;
+				padding-inline-start: 40px;
+				font-family: "微软雅黑" ;
+				font-size: inherit;
+				-webkit-font-smoothing: antialiased;
+			}
+			
+			.menue {
+				display: block;
+				width: 650px;
+				float: left;
+				position: relative;
+				color: white;
+			}
+			
+			.item {
+				color: white;
+				font-family:  Comic Sans MS !important;
+			}
+			
+			.item:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				color: yellow;
+			}
+			
+			.contain3 {
+				float: right;
+				width: 180px;
+				height: 50px;
+			}
+			
+			.lit {
+				display: inline-block;
+				color: white;
+				margin-top: 14px;
+			}
+			
+			.lit a:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				opacity: 0.7;
+			}
+			
+			.mainpart {
+				background-color: #FFFFFF;
+				overflow: hidden;
+			}
+			
+			.showpart {
+				overflow: hidden;
+				margin-top: 70px;
+				margin-left: 70px;
+				color: white;
+			}
+			
+			.part {
+				display: inline-block;
+				width: 172px;
+				height: 172px;
+				border-radius: 5px;
+				margin-left: 10px;
+			}
+			
+			#showpart1 {
+				background-color: #10C45C;
+			}
+			
+			#showpart2 {
+				background-color: #FDC735;
+			}
+			
+			#showpart3 {
+				background-color: #307AD5;
+			}
+			
+			#showpart4 {
+				background-color: #E948AE;
+			}
+			
+			#showpart5 {
+				background-color: #48A7D4;
+			}
+			
+			#showpart6 {
+				background-color: #6FC191;
+			}
+			
+			.show_text {
+				font-size: 25px;
+				font-family: Comic Sans MS;
+				text-align: center;
+				margin-top: 130px;
+			}
+			
+			#more {
+				float: left;
+				overflow: hidden;
+				margin-top: 50px;
+				margin-left: 545px;
+				width: 180px;
+				height: 50px;
+				background-color: #FF5951;
+				border-radius: 3px;
+			}
+			
+			#more:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #222222;
+			}
+			
+			#mainpart1 {
+				width: auto;
+				height: auto;
+				margin-top: 100px;
+			}
+			
+			#img1 {
+				background-image: url(img/timg.png);
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 520px;
+				background-size: 100% 100%;
+				/*-webkit-filter: opacity(50%);filter: opacity(50%);*/
+				设置模糊
+			}
+			
+			.photocard {
+				display: inline-block;
+				margin-left: 20px;
+				background-color: #FBFBFB;
+			}
+			
+			#photocard1 {
+				border: 0px solid #ccc;
+				width: 370px;
+				height: 460px;
+				overflow: hidden;
+			}
+			
+			#photocard1 img {
+				cursor: pointer;
+				transition: all 0.6s;
+			}
+			
+			#photocard1 img:hover {
+				transform: scale(1.1);
+			}
+			
+			.button {
+				float: left;
+				width: 110px;
+				height: 28px;
+				margin-top: 10px;
+				margin-left: 20px;
+				border: 2px solid #FF5951;
+				border-radius: 5px;
+				text-align: center;
+				color: #FF5951;
+			}
+			
+			.button:hover {
+				color: white;
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #FF5951;
+			}
+			
+			#button2 {
+				float: left;
+				overflow: hidden;
+				margin-top: 50px;
+				margin-left: 545px;
+				width: 180px;
+				height: 50px;
+				background-color: #FF5951;
+				border-radius: 3px;
+			}
+			
+			#button2:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #222222;
+			}
+			
+			#mainpart3 {
+				width: 100%;
+				height: 500px;
+				background-image: url(img/scr02.jpg);
+				background-size: 100% 100%;
+				margin-top: 50px;
+			}
+			
+			#lastpart {
+				width: 100%;
+				height: 348px;
+				background-color: #2A2A2A;
+				overflow: hidden;
+				margin-top: 10px;
+			}
+			
+			.last_part {
+				display: inline-block;
+				overflow: hidden;
+				margin-left: 56px;
+			}
+			
+			.leftpart1 {
+				overflow: hidden;
+				margin-top: 30px;
+				margin-left: 100px;
+				color: #66665C;
+			}
+			
+			#iconpart1 {
+				width: 30px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -22px 0px;
+			}
+			
+			#iconpart1:hover {
+				
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -22px -93px;
+			}
+			
+			#iconpart2 {
+				width: 45px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -124px 0px;
+			}
+			
+			#iconpart2:hover {
+				
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -124px -93px;
+			}
+			
+			#iconpart3 {
+				width: 42px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -234px 0px;
+			}
+			
+			#iconpart3:hover {
+				
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -234px -93px;
+			}
+			
+			#iconpart4 {
+				width: 70px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -329px 0px;
+			}
+			
+			#iconpart4:hover {
+				
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -329px -93px;
+			}
+			
+			.leftpart2 {
+				margin-left: 94px;
+			}
+			
+			.intro {
+				display: inline-block;
+				color: #66665C;
+				margin-left: 56px;
+				margin-top: 10px;
+			}
+			.allpart{
+				display: block;
+				overflow: hidden;
+			}
+			.allpart p a{
+				color:#8B8B8B;
+			}
+			.allpart p a:hover{
+				color:#FFFFFF !important;
+			}
+			 
+		</style>
+	</head>
+
+	<body>
+		<div class="headmenu">
+			<div class="content1">
+				<h1 class="icon">
+					<a></a>
+				</h1>
+			</div>
+			<div class="contain2">
+				<ul class="menue">
+					<li class="list">
+						<a href="#">
+							<i class="item">首页</i>
+						</a>
+					</li>
+					<li class="list">
+						<a href="tiezi.html" target="_blank">
+							<i class="item">论坛</i>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<i class="item">问答</i>
+						</a>
+					</li>
+					<li class="list">
+						<a href="#">
+							<i class="item">更多</i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contain3">
+				<ul class="menue_right">
+					<li class="lit" style="width:50px;height: 24px;background-color:#5E749D;text-align: center;border-radius: 3px;">
+						<a href="#" style="color: white;">登陆</a>
+					</li>
+					<span style="color: #848484;font-size: 14px;">or</span>
+					<li class="lit" style="width:50px;height: 24px;background-color:#529A67;text-align: center;border-radius: 3px;">
+						<a href="#" style="color: white;">注册</a>
+					</li>
+					<!--<li class="lit" style="width:50px;height: 24px;background-color:#529A67;border-radius: 3px;"><i style="text-align: center;">注册</i></li>-->
+				</ul>
+			</div>
+
+		</div>
+		<div class="sun_banner">
+			<div class="Yl-container"></div>
+		</div>
+		<div class="mainpart">
+			<div id="textpart">
+				<p style="text-align: center;margin-top:100px;font-size: 20px;font-family:Comic Sans MS;color:#FF5951 ;">WELCOME TO COMMUNITY MD</p>
+				<p style="text-align: center;margin-top:15px;font-size: 60px;font-family: '微软雅黑';font-weight: 800;">OUR APP PALTFORM</p>
+				<p style="text-align: center;margin-top:20px;font-size: 17px;font-family:;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a pi classical Latin<br /> literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+			</div>
+			<div class="showpart">
+				<div class="part" id="showpart1">
+					<p class="show_text">article</p>
+				</div>
+				<div class="part" id="showpart2">
+					<p class="show_text">homepage</p>
+				</div>
+				<div class="part" id="showpart3">
+					<p class="show_text">person</p>
+				</div>
+				<div class="part" id="showpart4">
+					<p class="show_text">setting</p>
+				</div>
+				<div class="part" id="showpart5">
+					<p class="show_text">technology</p>
+				</div>
+				<div class="part" id="showpart6">
+					<p class="show_text">resource</p>
+				</div>
+			</div>
+			<div style="width: 100%;height: 100px;overflow:hidden;margin-top: 5px;">
+				<a href="#" onclick="myFunction()">
+					<div id="more">
+						<p style="float: left;margin-left: 65px;margin-top: 15px;color: white;">More</p>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div id="mainpart1">
+			<div id="img1">
+			</div>
+		</div>
+		<div id="mainpart2">
+			<div id="textpart">
+				<p style="text-align: center;margin-top:100px;font-size: 20px;font-family:Comic Sans MS;color:#FF5951 ;">COME TO USE</p>
+				<p style="text-align: center;margin-top:15px;font-size: 60px;font-family: '微软雅黑';font-weight: 800;">MOST INTERESTED PROGRAM</p>
+				<p style="text-align: center;margin-top:20px;font-size: 17px;font-family:;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a pi classical Latin<br /> literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+			</div>
+			<div style="overflow: hidden;margin-top: 30px;margin-left: 24px;">
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/1.jpg" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">Technology sharing platform.</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#" ><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/2.png" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">Study sharing platform</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#" ><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/3.jpg" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">We Media</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#"><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div style="overflow: hidden;margin-top: 30px;margin-left: 24px;">
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/4.jpg" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">Social networking Space.</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#"><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/5.jpg" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">Questions and Answers.</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#"><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+				<div id="photocard1" class="photocard">
+					<div>
+						<img src="img/6.jpg" width="370px" height="237px" />
+					</div>
+					<div class="textcard">
+						<p style="margin-top: 20px;margin-left: 20px;font-family: arial;font-weight: bold;font-size: 20px;">Join Our Team.</p>
+						<p style="margin-left: 20px;margin-top:5px;font-size: 11px;">
+							<a href="#"><span style="color:#FF5951">Community MD</span></a> <span>&nbsp;&nbsp;|&nbsp;&nbsp;开发中……</span></p>
+						<p style="margin-top: 20px;margin-left: 20px;">Contrary to popular belief, Lorem Ipsum </p>
+						<p style="margin-top: 10px;margin-left: 20px;">isnotimply random text.. </p>
+					</div>
+					<a href="tiezi.html" target="_blank">
+						<div class="button">
+							<p style="margin-top: 5px;font-size: 13px;">Go Now</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div style="width: 100%;height: 100px;overflow:hidden;margin-top: 5px;">
+				<a href="#" onclick="myFunction()">
+					<div id="button2">
+						<p style="float: left;margin-left: 38px;margin-top: 15px;color: white;">持续更新中……</p>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div id="mainpart3">
+
+		</div>
+		<div id="lastpart">
+			<div class="allpart" style="float: left;">
+				<div class="leftpart1">
+					<div style="color:#666666;font-size: 14px;margin-left: 32px;">了解热门产品</div>
+					<div class="last_part" id="icon1">
+						<a href="mobile.html" target="_blank">
+							<div id="iconpart1"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon2">
+						<a href="#lastpart" onclick="myFunction()">
+							<div id="iconpart2"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon3">
+						<a href="#lastpart" onclick="myFunction()">
+							<div id="iconpart3"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon4">
+						<a href="#lastpart" onclick="myFunction()">
+							<div id="iconpart4"></div>
+						</a>
+					</div>
+				</div>
+				<div class="leftpart2">
+					<div class="intro">手机版</div>
+					<div class="intro">PC版</div>
+					<div class="intro">Mac版</div>
+					<div class="intro">pad版</div>
+				</div>
+			</div>
+			<div class="allpart" style="float: left;margin-left: 100px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">软件安全</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >安全中心</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >冻结账号</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >举报恶意行为</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >注销账号</a></p>
+				</div>
+			<div class="allpart" style="float: left;margin-left: 110px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">帮助反馈</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >客服中心</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >反馈问题</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >新浪微博</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >电话联系</a></p>
+				</div>
+				<div class="allpart" style="float: left;margin-left: 110px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">友情链接</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">CSDN</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">菜鸟教程</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">W3cschool</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">知乎</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">简书</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">百度贴吧</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">百度知道</a></p>
+				</div>
+			<div style="float: left;width:100%;height: 20px;margin-left: 120px;margin-top: 20px;">
+			<img src="img/QQ图片20181202000156.png" width="1000px" height="3px"/>
+			<footer style="font-size: 12px;margin-left: 400px;margin-top: 10px;color:#666666;">
+				Copyright © 1998-2018 LT. 版权所有
+			</footer>
+		</div>
+		</div>
+		
+
+	</body>
+
+</html>

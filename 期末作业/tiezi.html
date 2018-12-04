@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta charset="UTF-8">
+		<title>多维社区——论坛demo</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<linkrel="Bookmark" href="favicon.ico">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				list-style: none;
+				text-decoration: none;
+			}
+			
+			.headmenu {
+				overflow: hidden;
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				z-index: 999;
+				background-color: #FFFFFF;
+				margin: auto;
+				min-width: 1100px;
+				border-bottom: 1px solid #DCDCDC;
+			}
+			
+			#content1 {
+				float: left;
+				margin-left: 30px;
+			}
+			
+			#content2 {
+				float: left;
+				margin-left: 100px;
+				font-size: 16px;
+			}
+			
+			#content3 {
+				float: left;
+				margin-left: 50px;
+				font-size: 14px;
+				height: 100%;
+				width: 100px;
+				text-align: center;
+			}
+			
+			#content3:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #F5F5F5;
+			}
+			
+			#content4 {
+				float: left;
+				margin-left: 50px;
+				margin-top: 10px;
+				background-image: url(img/8.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 200px;
+				height: 78%;
+			}
+			
+			#content5 {
+				float: left;
+				margin-left: 300px;
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			#content6 {
+				float: left;
+				margin-left: 50px;
+				margin-top: 10px;
+				height: 40px;
+				width: 80px;
+				font-size: 14px;
+				border-radius: 27px;
+				border: #EC6149 0.5px solid;
+				overflow: hidden;
+			}
+			
+			#content6:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #FEF7F6;
+			}
+			
+			
+			
+			#blankpart {
+				height: 100px;
+				width: 100%;
+			}
+			
+			#picturepart {
+				height: 280px;
+				width: 100%;
+				
+				margin-left: 160px;
+			}
+			
+			#leftpart {
+				overflow: hidden;
+				width: 600px;
+				height: 268px;
+				background-image: url(img/nonono.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				border: 1px solid #DCDCDC;
+				border-radius: 4px;
+			}
+			
+			.inlinepart {
+				display: inline-block;
+			}
+			
+			#rightpart {
+				overflow: hidden;
+				width: 300px;
+				height: 268px;
+				border-radius: 4px;
+				margin-left: 40px;
+			}
+			
+			#mainall {
+				height: 1000px;
+				width: 100%;
+				margin-left: 160px;
+			}
+			
+			.titlemain {
+				font-size: 18px;
+				font-weight: 750;
+				font-family: '微软雅黑';
+				color: #2F2F2F;
+			}
+			
+			.titlemain:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				text-decoration: underline;
+			}
+			
+			#main7 {
+				height: 40px;
+				width: 600px;
+				background-color: #a5a5a5;
+				color: #FFFFFF;
+				border-radius: 40px;
+			}
+			
+			#main7:hover {
+				background-color: #9B9B9B;
+			}
+			
+			#leftmain {
+				float: left;
+			}
+			
+			#rightmain {
+				margin-left: 40px;
+			}
+			
+			#right2 p span a:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				color: #78788D !important;
+			}
+			
+			#pic1 {
+				background-image: url(img/20.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+			}
+			
+			#pic2 {
+				background-image: url(img/21.jpeg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+			}
+			
+			#pic3 {
+				background-image: url(img/22.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+			}
+			
+			#pic4 {
+				background-image: url(img/23.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+			}
+			
+			#pic5 {
+				background-image: url(img/24.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+			}
+			#lastmain{
+				margin-top: 100px;
+				font-size: 13px;
+				color:#9B9B9B ;
+				
+			}
+			#lastmain p span a{
+				color:#9B9B9B ;
+			}
+			#lastmain p span a:hover{
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				color:#2F2F2F ;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="headmenu">
+			<div id="content1">
+				<p style="color:#EC6149;font-size: 25px;margin-top: 14px;">多 维 社 区</p>
+			</div>
+			<div id="content2">
+				<a href="index.html" target="_blank"><p style="color:#EC6149;margin-top: 20px;">首页</p></a>
+			</div>
+			<a href="#">
+				<div id="content3">
+					<p style="font-size: 16px;color:#292929 ;font-weight: 600;margin-top: 20px;">APP下载</p>
+				</div>
+			</a>
+			<div id="content4">
+			</div>
+			<div id="content5">
+				<p style="color:#C2C2C2;margin-top:25px;">登陆</p>
+			</div>
+			<div id="content6">
+				<p style="display: block;color:#EC6149;margin-top: 11px;float: left;margin-left: 25px;">注册</p>
+			</div>
+			
+		</div>
+		<div id="blankpart"></div>
+		<div id="picturepart">
+			<div id="leftpart" class="inlinepart">
+              
+			</div>
+			<div id="rightpart" class="inlinepart">
+				<div>
+					<img src="img/9.png" width="250px" height="50px" />
+				</div>
+				<div>
+					<img src="img/10.png" width="250px" height="50px" />
+				</div>
+				<div>
+					<img src="img/11.png" width="250px" height="50px" />
+				</div>
+				<div>
+					<img src="img/12.png" width="250px" height="50px" />
+				</div>
+				<div>
+					<img src="img/13.png" width="250px" height="50px" />
+				</div>
+			</div>
+		</div>
+		<div id="mainall" style="margin-top: 14px;">
+			<div id="leftmain" class="inlinepart">
+				<div id="main1" style="height:140px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+					<div id="textmain1" style="margin-top: 10px;">
+						<a href="#">
+							<span class="titlemain">三体微小说</span>
+						</a>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 8px;">文/北崖 一个人自我进化可以有两种方式，一种是自助，一种是求助。 自助是依靠自己擅长的能力，向内 </p>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 4px;">生长； 求助是弥补自己缺乏的能力，向外生长。 懂...</p>
+						<p style="width: 600px;font-size: 11px;color:#9B9B9B;margin-top: 17px;"><span>我是北崖君</span>&nbsp;&nbsp;&nbsp;<span>55</span>&nbsp;&nbsp;&nbsp;<span>188</span></p>
+					</div>
+				</div>
+				<div id="main2" style="height:140px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+					<div id="textmain2" style="margin-top: 10px;">
+						<a href="#">
+							<span class="titlemain">油画——听，海哭的声音</span>
+						</a>
+						<p style="width: 400px;font-size: 13px;color:#9B9B9B;margin-top: 8px;">一滴水珠，遇到另一滴水珠，亲密拥抱，粉身碎骨。 海，在哭泣。 一</p>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 4px;">朵浪花，遇到另一朵浪花，旋转起舞，转瞬即逝。 海，在哭泣。 一个</p>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 4px;">音符，遇到另一个... </p>
+						<p style="width: 600px;font-size: 11px;color:#9B9B9B;margin-top: 8px;"><span>南蛮文子</span>&nbsp;&nbsp;&nbsp;<span>78</span>&nbsp;&nbsp;&nbsp;<span>132</span></p>
+					</div>
+					<div style="margin-left: 490px;margin-top: -80px;">
+						<img src="img/15.jpg" width="110px" height="80px" />
+					</div>
+				</div>
+				<div id="main3" style="height:140px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+					<div id="textmain3" style="margin-top: 10px;">
+						<a href="#">
+							<span class="titlemain">python 实现对话机器人</span>
+						</a>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 8px;">本文csdn地址benwen 前言 在不远的将来，实现一定程度上的语音支持将成为日常</p>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 4px;">科技的基本要求，整合了语音识别的python程序提供了其他技... </p>
+						<p style="width: 600px;font-size: 11px;color:#9B9B9B;margin-top: 17px;"><span>我是北崖君</span>&nbsp;&nbsp;&nbsp;<span>55</span><span>188</span></p>
+					</div>
+					<div style="margin-left: 490px;margin-top: -80px;">
+						<img src="img/8645826-8b9960a2fc73012b.png" width="110px" height="80px" />
+					</div>
+				</div>
+				<div id="main4" style="height:140px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+					<div id="textmain4" style="margin-top: 10px;">
+						<a href="#">
+							<span class="titlemain">12.12！你学习，我买单！精品好课任选</span>
+						</a>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 8px;">口语！留学！考研！多国外语！职场财会！还有1212大红包！抢</p>
+
+						<div style="width: 37px;height: 16px;font-size: 11px;color:#9B9B9B;margin-top: 30px;text-align: center;border:1px solid #C2C2C2;border-radius: 3px;">广告</div>
+					</div>
+					<div style="margin-left: 490px;margin-top: -80px;">
+						<img src="img/18.png" width="110px" height="80px" />
+					</div>
+				</div>
+				<div id="main5" style="height:140px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+					<div id="textmain5" style="margin-top: 10px;">
+						<a href="#">
+							<span class="titlemain">《快把我哥带走》陪我长大的愿望，在我心里面埋藏</span>
+						</a>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 8px;">文‖沤泥 图‖剧照 “哥，你落东西了，你把我落下了”。我承认看到这里，瞬间</p>
+						<p style="width: 600px;font-size: 13px;color:#9B9B9B;margin-top: 4px;">控制不住打开了泪腺，在异地思念着我的姐姐和弟弟。 这是一部打着喜剧的幌... </p>
+						<p style="width: 600px;font-size: 11px;color:#9B9B9B;margin-top: 17px;"><span>我是沤泥</span>&nbsp;&nbsp;&nbsp;<span>55</span><span>188</span></p>
+					</div>
+					<div style="margin-left: 490px;margin-top: -80px;">
+						<img src="img/17.jpg" width="110px" height="80px" />
+					</div>
+				</div>
+				<div id="main6" style="height:50px ;">
+					<img src="img/QQ图片20181202201450.png" width="603px" />
+
+				</div>
+				<a href="#">
+
+					<div id="main7">
+						<p style="float: left;margin-top:8px;margin-left: 280px;">阅读更多</p>
+					</div>
+				</a>
+			<div id="lastmain">
+				<p><span><a href="#">关于社区</a></span> · <span><a href="#">联系我们</a></span> · <span><a href="#">加入我们</a></span> · <span><a href="#">网站建设</a></span> · <span><a href="#">帮助中心</a></span> · <span><a href="#">合作伙伴</a></span></p>
+			</div>
+			</div>
+			<div id="rightmain" class="inlinepart">
+				<div id="right1">
+					<img src="img/10.png" width="250px" height="80px" />
+				</div>
+				<div id="right2" style="margin-top: 30px;">
+					<p><span style="font-size: 13px;color:#9B9B9B ;">推荐作者</span><span> <a href="#" style="font-size: 13px;color:#9B9B9B;margin-left: 150px;">换一批</a></span></p>
+				</div>
+				<div id="right3" style="margin-top: 17px;">
+					<div id="writer1">
+						<a href="img/20.jpg" target="_blank">
+							<div class="inlinepart" id="pic1"></div>
+						</a>
+						<div class="inlinepart" style="margin-left: 7px;">
+							<p style="margin-bottom:8px;font-size: 14px;">李易峰</p>
+							<p style="font-size: 11px;color:#9B9B9B ;">写了6.9k字 · 16.7k喜欢 </p>
+						</div>
+						<div class="inlinepart" style="margin-left: 20px;margin-top: 10px;float: right;">
+							<p>
+								<a href="#"><span style="font-size: 20px;color:#42C02E;">+</span><span style="color:#42C02E;font-size: 14px;">关注</span></a>
+							</p>
+						</div>
+					</div>
+					<div id="writer2" style="margin-top: 16px;">
+						<a href="img/21.jpeg" target="_blank">
+							<div class="inlinepart" id="pic2"></div>
+						</a>
+						<div class="inlinepart" style="margin-left: 7px;">
+							<p style="margin-bottom:8px;font-size: 14px;">马云</p>
+							<p style="font-size: 11px;color:#9B9B9B ;">写了626.9k字 · 168.6k喜欢 </p>
+						</div>
+						<div class="inlinepart" style="margin-left: 20px;margin-top: 10px;float: right;">
+							<p>
+								<a href="#"><span style="font-size: 20px;color:#42C02E;">+</span><span style="color:#42C02E;font-size: 14px;">关注</span></a>
+							</p>
+						</div>
+					</div>
+					<div id="writer3" style="margin-top: 16px;">
+						<a href="img/22.jpg" target="_blank">
+							<div class="inlinepart" id="pic3"></div>
+						</a>
+						<div class="inlinepart" style="margin-left: 7px;">
+							<p style="margin-bottom:8px;font-size: 14px;">马化腾</p>
+							<p style="font-size: 11px;color:#9B9B9B ;">写了62.9k字 · 143.7k喜欢 </p>
+						</div>
+						<div class="inlinepart" style="margin-left: 20px;margin-top: 10px;float: right;">
+							<p>
+								<a href="#"><span style="font-size: 20px;color:#42C02E;">+</span><span style="color:#42C02E;font-size: 14px;">关注</span></a>
+							</p>
+						</div>
+					</div>
+					<div id="writer4" style="margin-top: 16px;">
+						<a href="img/23.jpg" target="_blank">
+							<div class="inlinepart" id="pic4"></div>
+						</a>
+						<div class="inlinepart" style="margin-left: 7px;">
+							<p style="margin-bottom:8px;font-size: 14px;">雷军</p>
+							<p style="font-size: 11px;color:#9B9B9B ;">写了8.9k字 · 16.7k喜欢 </p>
+						</div>
+						<div class="inlinepart" style="margin-left: 20px;margin-top: 10px;float: right;">
+							<p>
+								<a href="#"><span style="font-size: 20px;color:#42C02E;">+</span><span style="color:#42C02E;font-size: 14px;">关注</span></a>
+							</p>
+						</div>
+					</div>
+					<div id="writer5" style="margin-top: 16px;">
+						<a href="img/24.jpg" target="_blank">
+							<div class="inlinepart" id="pic5"></div>
+						</a>
+						<div class="inlinepart" style="margin-left: 7px;">
+							<p style="margin-bottom:8px;font-size: 14px;">胡歌</p>
+							<p style="font-size: 11px;color:#9B9B9B ;">写了82.9k字 · 176.7k喜欢 </p>
+						</div>
+						<div class="inlinepart" style="margin-left: 20px;margin-top: 10px;float: right;">
+							<p>
+								<a href="#"><span style="font-size: 20px;color:#42C02E;">+</span><span style="color:#42C02E;font-size: 14px;">关注</span></a>
+							</p>
+						</div>
+					</div>
+					<div id="lastwr" style="margin-top: 30px;">
+
+						<a href="#">
+							<div class="inlinepart" style="margin-left: 7px;width: 300px;height: 34px;background-color: #F7F7F7;border-radius: 3px;border:1px solid #DCDCDC;">
+								<p style="margin-left: 110px;margin-top: 6px;"><span style="font-size: 12px;color:#787878 ;">查看全部</span><span style="font-size: 13px;margin-left: 6px;color:#787878;">></span></p>
+							</div>
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		</div>
+
+	</body>
+
+</html>

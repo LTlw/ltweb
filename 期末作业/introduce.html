@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta charset="UTF-8">
+		<title>多维社区——项目概况</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<linkrel="Bookmark" href="favicon.ico">
+		<style>
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-family: "微软雅黑";
+			}
+			
+			a {
+				list-style: none;
+				text-decoration: none;
+			}
+			
+			.headmenu {
+				overflow: hidden;
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				z-index: 250;
+				background-color: #FFFFFF;
+				margin: auto;
+				min-width: 1100px;
+				border-bottom: 1px solid #DCDCDC;
+				transition: background-color 1s;
+			}
+			
+			#content1 {
+				float: left;
+				margin-left: 30px;
+			}
+			
+			#content2 {
+				float: left;
+				margin-left: 100px;
+				font-size: 16px;
+			}
+			
+			#content3 {
+				float: left;
+				margin-left: 50px;
+				font-size: 14px;
+				height: 100%;
+				width: 100px;
+				text-align: center;
+			}
+			
+			#content3:hover {
+				background-color: #F5F5F5;
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+			}
+			
+			#content4 {
+				float: left;
+				margin-left: 50px;
+				margin-top: 10px;
+				background-image: url(img/8.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 200px;
+				height: 78%;
+			}
+			
+			#content5 {
+				float: left;
+				margin-left: 300px;
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			#content6 {
+				float: left;
+				margin-left: 50px;
+				margin-top: 10px;
+				height: 40px;
+				width: 80px;
+				font-size: 14px;
+				border-radius: 27px;
+				border: #EC6149 0.5px solid;
+				overflow: hidden;
+			}
+			
+			#content6:hover {
+				-webkit-transition-duration: 0.6s;
+		    transition-duration: 0.6s;
+				background-color: #FEF7F6;
+			}
+			
+			#content7 {
+				float: left;
+				margin-left: 20px;
+				margin-top: 10px;
+				height: 40px;
+				width: 100px;
+				font-size: 14px;
+				border-radius: 27px;
+				border: #EC6149 0.5px solid;
+				overflow: hidden;
+				background-color: #EB6F5A;
+			}
+			
+			#content7:hover {
+				background-color: #EC6149;
+			}
+			
+			#video {
+				overflow: hidden;
+			}
+			
+			.mainVideo {
+				width: 99.8%;
+				height: 600px%;
+			}
+			.inline_block{
+				display: inline-block;
+			}
+			.allmpart{
+				overflow: hidden;
+				width: 100%;
+				height: 500px;
+				
+			}
+			#leftmpart1{
+				float: left;
+				width: 500px;
+				height: 350px;				
+				margin-left: 60px;
+				margin-top: 75px;
+			}
+			#centermpart1{
+				float: left;
+				width: 380px;
+				height: 200px;
+				
+				margin-left: 50px;
+				margin-top: 203px;
+			}
+			#rightmpart1{
+				float: right;
+				width: 250px;
+				height: 200px;
+				background-image: url(img/25.jpg);
+				background-size:100% 100%;
+				background-repeat: no-repeat;
+			
+			}
+			.mbutton1{
+				width: 100px;
+				height: 30px;
+				background-color: #4F93EA;
+				margin-top: 40px;
+				border-radius: 15px;
+			}
+			#leftmpart2{
+				float: left;
+				width: 250px;
+				height: 200px;
+				background-image: url(img/27.jpg);
+				background-size:100% 100%;
+				background-repeat: no-repeat;
+				
+			}
+			#centermpart2{
+				float: left;
+				width: 350px;
+				height: 200px;
+				
+				margin-left: 20px;
+				margin-top: 0px;
+				margin-top: 150px;
+			}
+			#rightmpart2{
+				margin-left: 50px;
+			}
+			.mbutton2{
+				width: 100px;
+				height: 30px;
+				background-color: #4F93EA;
+				margin-top: 40px;
+				border-radius: 15px;
+				margin-left: 50px;
+			}
+			#leftmpart3{
+				float: left;
+				width: 500px;
+				height: 350px;				
+				margin-left: 60px;
+				margin-top: 75px;
+			}
+			#centermpart3{
+				float: left;
+				width: 380px;
+				height: 200px;				
+				margin-left: 50px;
+				margin-top: 203px;
+			}
+			#rightmpart3{
+				float: right;
+				width: 250px;
+				height: 200px;
+				background-image: url(img/31.jpg);
+				background-size:100% 100%;
+				background-repeat: no-repeat;
+				margin-top: 200px;
+			
+			}
+			.mbutton3{
+				width: 100px;
+				height: 30px;
+				background-color: #4F93EA;
+				margin-top: 40px;
+				border-radius: 15px;
+			}
+			#leftmpart4{
+				float: left;
+				width: 250px;
+				height: 400px;
+				margin-top:50px;
+				background-image: url(img/32.jpeg);
+				background-size:100% 100%;
+				background-repeat: no-repeat;
+				
+			}
+			#centermpart4{
+				float: left;
+				width: 350px;
+				height: 200px;
+				
+				margin-left: 20px;
+				margin-top: 0px;
+				margin-top: 150px;
+			}
+			#rightmpart4{
+				margin-left: 50px;
+				
+			}
+			.mbutton4{
+				width: 100px;
+				height: 30px;
+				background-color: #4F93EA;
+				margin-top: 40px;
+				border-radius: 15px;
+				margin-left: 50px;
+			}
+			#lastmpart1{
+				height: 200px;
+				width: 100%;
+				
+				border-top: 1px solid #DCDCDC;
+				border-bottom: 2px solid #DCDCDC;
+				margin-top: -50px;
+				overflow: hidden;
+				
+			}
+			#lastmpart2{
+				background-image: url(img/timg.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 100%;
+				height: 450px;
+			}
+			#lastpart {
+				width: 100%;
+				height: 348px;
+				background-color: #2A2A2A;
+				overflow: hidden;
+				margin-top: 2px;
+			}
+			
+			.last_part {
+				display: inline-block;
+				overflow: hidden;
+				margin-left: 56px;
+			}
+			
+			.leftpart1 {
+				overflow: hidden;
+				margin-top: 30px;
+				margin-left: 100px;
+				color: #66665C;
+			}
+			
+			#iconpart1 {
+				width: 30px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -22px 0px;
+			}
+			
+			#iconpart1:hover {
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -22px -93px;
+			}
+			
+			#iconpart2 {
+				width: 45px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -124px 0px;
+			}
+			
+			#iconpart2:hover {
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -124px -93px;
+			}
+			
+			#iconpart3 {
+				width: 42px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -234px 0px;
+			}
+			
+			#iconpart3:hover {
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -234px -93px;
+			}
+			
+			#iconpart4 {
+				width: 70px;
+				height: 50px;
+				margin-top: 30px;
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -329px 0px;
+			}
+			
+			#iconpart4:hover {
+				background-image: url(img/plats1.png);
+				background-repeat: no-repeat;
+				background-position: -329px -93px;
+			}
+			
+			.leftpart2 {
+				margin-left: 94px;
+			}
+			
+			.intro {
+				display: inline-block;
+				color: #66665C;
+				margin-left: 56px;
+				margin-top: 10px;
+			}
+			.allpart{
+				display: block;
+				overflow: hidden;
+			}
+			.allpart p a{
+				color:#8B8B8B;
+			}
+			.allpart p a:hover{
+				color:#FFFFFF !important;
+			}
+			.text-underline{
+            display: inline;
+            text-align: center;
+            position: relative;
+        }
+        .text-underline::after{
+            position: absolute;
+            left: 0;
+            top: 30px;
+            content: '';
+            background-color: #0087cd;
+            width: 100%;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            transition: all .5s;
+            -webkit-transition: all .5s;
+
+        }
+        .text-underline:hover::after{
+            height: 2px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+		</style>
+	</head>
+
+	<body>
+		<div class="headmenu">
+			<div id="content1">
+				<p style="color:#EC6149;font-size: 25px;margin-top: 14px;">多 维 社 区</p>
+			</div>
+			<div id="content2">
+				<a href="index.html" target="_blank">
+					<p style="color:#EC6149;margin-top: 20px;">首页</p>
+				</a>
+			</div>
+			<a href="#lastpart">
+				<div id="content3">
+					<p style="font-size: 16px;color:#292929 ;font-weight: 600;margin-top: 20px;">APP下载</p>
+				</div>
+			</a>
+			<div id="content4">
+			</div>
+			<div id="content5">
+				<p style="color:#C2C2C2;margin-top:25px;">登陆</p>
+			</div>
+			<div id="content6">
+				<p style="display: block;color:#EC6149;margin-top: 11px;float: left;margin-left: 25px;">注册</p>
+			</div>
+			<div id="content7">
+				<p style="display: block;color:#FFFFFF;margin-top: 11px;float: left;margin-left: 25px;">发帖吧</p>
+			</div>
+		</div>
+		<div id="video">
+			<video class="mainVideo" src="video/advertise.mp4" autoplay="autoplay" loop="loop" muted="muted" data-v-2d70e0e9=""></video>
+		</div>
+		<div id="mpart">
+			<div id="mpart1" class="allmpart">
+				<div class="inline_block" id="leftmpart1">
+					<img src="img/26.png"  width="500px" height="350px"/>
+				</div>
+				<div class="inline_block" id="centermpart1">
+					<div id="textm1">
+						<p style="font-size: 25px;font-weight: 800;color: #3E3A39;">社交</p>
+						<p style="font-size: 12px;font-weight: 500;color: #3E3A39;">每一天，乐在沟通。即使世界很大，你也不会孤单，在多维社区有和你一样的人，期待着和你一起发现精彩。共同好友让我们相识，分享乐趣使我们相知。支持发送语音短信、视频、图片和文字。</p>
+					    <div class="mbutton1"><p style="color: #FFFFFF;font-size: 14px;margin-left: 20px;margin-top:5px;float: left;">立即下载</p></div>
+					</div>
+				</div>
+				
+				<div class="inline_block" id="rightmpart1"></div>
+			</div>
+			<div id="mpart2" class="allmpart">
+				<div class="inline_block" id="leftmpart2"></div>
+				<div class="inline_block" id="centermpart2">
+					<div id="textm1">
+						<p style="font-size: 25px;font-weight: 800;color: #3E3A39;">About the app</p>
+						<p style="font-size: 12px;font-weight: 500;color: #3E3A39;">多维社区是集资源分享，自媒体日报，论坛为一体的社区系统；“PC端+H5端+移动客户端”多终端一体化，支持内容一次发布多屏呈现。</p>
+					    <div class="mbutton2"><p style="color: #FFFFFF;font-size: 14px;margin-left: 20px;margin-top:5px;float: left;">立即下载</p></div>
+					</div>
+				</div>
+				<div class="inline_block" id="rightmpart2">
+					<img src="img/33.png"  width="500px" height="350px"/>
+				</div>
+			</div>
+			<div id="mpart3" class="allmpart" style="margin-top: -100px;">
+				<div class="inline_block" id="leftmpart3">
+					<img src="img/36.jpg"  width="500px" height="350px"/>
+				</div>
+				<div class="inline_block" id="centermpart3">
+					<div id="textm1">
+						<p style="font-size: 25px;font-weight: 800;color: #3E3A39;">UI设计</p>
+						<p style="font-size: 12px;font-weight: 500;color: #3E3A39;">设计美学与智能体验突破，引入“无边界”设计美学，给用户提供更舒适、自然的使用感。界面将通过“布白”来优化界面信息密度与层级，并采用更轻量、淡雅、有节奏的色彩，让用户在长时间使用手机时感到更加舒适，能充分沉浸在“无边界”的自然观感中。</p>
+					    <div class="mbutton3"><p style="color: #FFFFFF;font-size: 14px;margin-left: 20px;margin-top:5px;float: left;">立即下载</p></div>
+					</div>
+				</div>
+				
+				<div class="inline_block" id="rightmpart3"></div>
+			</div>
+			<div id="mpart4" class="allmpart">
+				<div class="inline_block" id="leftmpart4"></div>
+				<div class="inline_block" id="centermpart4">
+					<div id="textm1">
+						<p style="font-size: 25px;font-weight: 800;color: #3E3A39;">产品分析</p>
+						<p style="font-size: 12px;font-weight: 500;color: #3E3A39;">建立涵知识分享，学习，社交与一体的综合化平台，一个旨在让用户感到便捷， 舒适的多元化社区，提高客户留存率。</p>
+					    <div class="mbutton4"><p style="color: #FFFFFF;font-size: 14px;margin-left: 20px;margin-top:5px;float: left;">立即下载</p></div>
+					</div>
+				</div>
+				<div class="inline_block" id="rightmpart4">
+					<img src="img/34.jpg"  width="500px" height="350px"/>
+				</div>
+			</div>
+		</div>
+		<div id="lastmpart1">
+			<div style="float: left;margin-left: 300px;margin-top: 80px;">
+				<a href="#mpart"><p class="text-underline"  style="font-size: 18px;color:#0087cd;font-weight: 400;font-family:'新宋体';">进一步了解多维社区2.0</p></a>   
+			</div>
+			<div style="float: left;margin-left: 300px;margin-top: 80px;">
+				<a href="#mpart"><p class="text-underline"  style="font-size: 18px;color:#0087cd;font-weight: 400;font-family:'新宋体';">进一步了解多维社区1.0</p> </a>  
+			</div>
+		</div>
+		<div id="lastmpart2"></div>
+		<div id="lastpart">
+			<div class="allpart" style="float: left;">
+				<div class="leftpart1">
+					<div style="color:#666666;font-size: 14px;margin-left: 32px;">了解热门产品</div>
+					<div class="last_part" id="icon1">
+						<a href="#">
+							<div id="iconpart1"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon2">
+						<a href="#">
+							<div id="iconpart2"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon3">
+						<a href="#">
+							<div id="iconpart3"></div>
+						</a>
+					</div>
+					<div class="last_part" id="icon4">
+						<a href="#">
+							<div id="iconpart4"></div>
+						</a>
+					</div>
+				</div>
+				<div class="leftpart2">
+					<div class="intro">手机版</div>
+					<div class="intro">PC版</div>
+					<div class="intro">Mac版</div>
+					<div class="intro">pad版</div>
+				</div>
+			</div>
+			<div class="allpart" style="float: left;margin-left: 100px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">软件安全</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >安全中心</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >冻结账号</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >举报恶意行为</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >注销账号</a></p>
+				</div>
+			<div class="allpart" style="float: left;margin-left: 110px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">帮助反馈</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >客服中心</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >反馈问题</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >新浪微博</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#" >电话联系</a></p>
+				</div>
+				<div class="allpart" style="float: left;margin-left: 110px;">
+				<div style="color:#666666;font-size: 14px;margin-top: 30px;">友情链接</div>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">CSDN</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">菜鸟教程</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">W3cschool</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">知乎</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">简书</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">百度贴吧</a></p>
+				<p style="font-size: 11px;margin-top: 10px;"><a href="#">百度知道</a></p>
+				</div>
+			<div style="float: left;width:100%;height: 20px;margin-left: 120px;margin-top: 20px;">
+			<img src="img/QQ图片20181202000156.png" width="1000px" height="3px"/>
+			<footer style="font-size: 12px;margin-left: 400px;margin-top: 10px;color:#FFFFFF;">
+				Copyright © 1998-2018 LT. 版权所有
+			</footer>
+		</div>
+		</div>
+	</body>
+
+</html>
